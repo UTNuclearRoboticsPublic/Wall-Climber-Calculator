@@ -1,0 +1,36 @@
+# Gravity
+g: 9.8 # [m/s^2]
+m: 2.5 # [kg]
+
+# Center of Mass Height
+com_height: 0 # [cm]
+
+# Suction
+suction_force: 90 # [N]
+
+# Skirt
+skirt_resolution: 10
+width_skirt: 18 # [cm]
+length_skirt: 22 #28 # [cm]
+thickness_skirt: 1 # [cm]
+zpos_skirt: 6 # [cm]
+stiffness_skirt: 1 #8.3 # [N/cm^2]
+static_friction_skirt: 0.31 # [~]
+
+# Wheel
+wheel_resolution: 3
+track_wheel: 26 # [cm]
+wheelbase_wheel: 22 # [cm]
+radius_wheel: 6 # [cm]
+height_wheel: 2.5 # [cm]
+stiffness_wheel: 20.8 #172.7 # [N/cm]
+static_friction_wheel: 0.58 # [~]
+
+# Cask
+radius_cask: 85 # [cm]
+height_cask: 50 # [cm]
+
+# External Force (Tether force)
+Fc: [0, 0, 0] # [cm cm cm] force location with respect to robot frame
+Fv: [0, 0, 1] # [cm cm cm] force direction with respect to world frame; unit vector (will be normalized regardless)
+Fmag: 0 # [N] Magnitude of external force

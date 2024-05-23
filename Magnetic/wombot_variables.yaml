@@ -1,0 +1,35 @@
+# Gravity
+g: 9.8 # [ft/s^2]
+m: 18.8 # [kg]
+
+# Center of Mass
+com_height: 0 # [cm]
+
+# Magnet Array
+width_array: 13 # [cm]
+width_array_resolution: 4
+length_array: 30.4 # [cm]
+length_array_resolution: 8
+# Following constants are based on curve fitting K&J magnetics data, and a test at chevron with the whole array
+strength_array: 53.420144044684925 # [N*cm^3] Treating this as inverse cube law | F = B/(x+A)^3, will consult with Zack for better modeling
+strength_array_offset: 0.7291008282843077 # [cm]
+strength_array_multiplier: 2 # Based on chevron tank experiment, the array with backplate supplied more force than individual magnets
+zpos_array: 5.9 # [cm]
+
+# Wheel
+wheel_resolution: 3
+track_wheel: 30.8 # [cm]
+wheelbase_wheel: 30 # [cm]
+radius_wheel: 6.9 # [cm]
+height_wheel: 3.8 # [cm]
+stiffness_wheel: 750 # [N/cm]
+static_friction_wheel: 1 # [~] 0.95 - 1.1 based on zach's testing
+
+# Cask
+radius_cask: 1400 # [cm]
+height_cask: 100 # [cm]
+
+# External Force (Tether force)
+Fc: [15, 0, 0] # [cm cm cm] force location with respect to robot frame
+Fv: [-1, 0, 1] # [cm cm cm] force direction with respect to world frame; unit vector (will be normalized regardless)
+Fmag: 50 # [N] Magnitude of external force
